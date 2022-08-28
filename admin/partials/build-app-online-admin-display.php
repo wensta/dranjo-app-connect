@@ -5,11 +5,11 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       https://buildapp.online
+ * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/admin/partials
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/admin/partials
  */
 ?>
 

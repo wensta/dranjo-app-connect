@@ -7,11 +7,11 @@ use Firebase\JWT\JWT;
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://buildapp.online
+ * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/admin
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/admin
  */
 
 /**
@@ -20,11 +20,11 @@ use Firebase\JWT\JWT;
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/admin
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/admin
  * @author     Abdul Hakeem <hakeem.nala@gmail.com>
  */
-class Build_App_Online_Admin {
+class dranjo_app_connect_Admin {
 
     /**
      * The ID of this plugin.
@@ -69,10 +69,10 @@ class Build_App_Online_Admin {
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Build_App_Online_Loader as all of the hooks are defined
+         * defined in dranjo_app_connect_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Build_App_Online_Loader will then create the relationship
+         * The dranjo_app_connect_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
@@ -92,10 +92,10 @@ class Build_App_Online_Admin {
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Build_App_Online_Loader as all of the hooks are defined
+         * defined in dranjo_app_connect_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Build_App_Online_Loader will then create the relationship
+         * The dranjo_app_connect_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */

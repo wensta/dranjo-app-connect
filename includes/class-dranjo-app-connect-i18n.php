@@ -6,11 +6,11 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       https://buildapp.online
+ * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/includes
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Build_App_Online
- * @subpackage Build_App_Online/includes
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/includes
  * @author     Abdul Hakeem <hakeem.nala@gmail.com>
  */
-class Build_App_Online_i18n {
+class dranjo_app_connect_i18n {
 
 
 	/**
