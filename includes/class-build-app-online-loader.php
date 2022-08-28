@@ -3,11 +3,11 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       https://buildapp.online
+ * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/includes
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/includes
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/includes
  * @author     Abdul Hakeem <hakeem.nala@gmail.com>
  */
-class Build_App_Online_Loader {
+class dranjo_app_connect_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.
