@@ -35,7 +35,7 @@ class dranjo_app_connect_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'build-app-online',
+			'dranjo-app-connect',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

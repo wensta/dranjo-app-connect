@@ -77,7 +77,7 @@ class dranjo_app_connect_Admin {
          * class.
          */
 
-        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/build-app-online-admin.css', array(), $this->version, 'all' );
+        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dranjo-app-connect-admin.css', array(), $this->version, 'all' );
 
     }
 
@@ -100,7 +100,7 @@ class dranjo_app_connect_Admin {
          * class.
          */
 
-        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/build-app-online-admin.js', array( 'jquery' ), $this->version, false );
+        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dranjo-app-connect-admin.js', array( 'jquery' ), $this->version, false );
 
     }
 
