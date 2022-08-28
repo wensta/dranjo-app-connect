@@ -3,11 +3,11 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       https://buildapp.online
+ * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/Multivendor
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/Multivendor
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/Multivendor
- * @author     Abdul Hakeem <hakeem.nala@gmail.com>
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/Multivendor
+ * @author     Dranjo <support@dranjo.com>
  */
-class Build_App_Online_Multivendor
+class dranjo_app_connect_Multivendor
 {
 
     /**

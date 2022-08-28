@@ -3,11 +3,11 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       https://buildapp.online
+ * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/public
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/public
- * @author     Abdul Hakeem <hakeem.nala@gmail.com>
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/public
+ * @author     Dranjo <support@dranjo.com>
  */
-class Build_App_Online_Public {
+class dranjo_app_connect_Public {
 
     /**
      * The ID of this plugin.
@@ -65,15 +65,15 @@ class Build_App_Online_Public {
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Build_App_Online_Loader as all of the hooks are defined
+         * defined in dranjo_app_connect_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Build_App_Online_Loader will then create the relationship
+         * The dranjo_app_connect_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
 
-        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/build-app-online-public.css', array(), $this->version, 'all' );
+        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dranjo-app-connect-public.css', array(), $this->version, 'all' );
 
     }
 
@@ -88,15 +88,15 @@ class Build_App_Online_Public {
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Build_App_Online_Loader as all of the hooks are defined
+         * defined in dranjo_app_connect_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Build_App_Online_Loader will then create the relationship
+         * The dranjo_app_connect_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
 
-        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/build-app-online-public.js', array( 'jquery' ), $this->version, false );
+        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dranjo-app-connect-public.js', array( 'jquery' ), $this->version, false );
 
     }
 
@@ -149,7 +149,7 @@ class Build_App_Online_Public {
         
         require_once plugin_dir_path( dirname( __FILE__ ) ) . '/languages/' . $locale . '.php';
 
-        $locale_cls = new Build_App_Online_i18nt();
+        $locale_cls = new dranjo_app_connect_i18nt();
 
         $data['locale'] = $locale_cls->load_plugin_textdomain();
 
@@ -302,7 +302,7 @@ class Build_App_Online_Public {
         }   
 
         //Delete below all code after migrating   
-        //$options = get_option('build_app_online');
+        //$options = get_option('dranjo_app_connect');
 
         $data['recentProducts'] = $this->get_products();
 
@@ -472,7 +472,7 @@ class Build_App_Online_Public {
         if($locale != 'en') {
             require_once plugin_dir_path( dirname( __FILE__ ) ) . '/languages/' . $locale . '.php';
 
-            $locale_cls = new Build_App_Online_i18nt();
+            $locale_cls = new dranjo_app_connect_i18nt();
 
             $language_texts = $locale_cls->load_plugin_textdomain();
         }
@@ -632,7 +632,7 @@ class Build_App_Online_Public {
         if($locale != 'en') {
             require_once plugin_dir_path( dirname( __FILE__ ) ) . '/languages/' . $locale . '.php';
 
-            $locale_cls = new Build_App_Online_i18nt();
+            $locale_cls = new dranjo_app_connect_i18nt();
 
             $language_texts = $locale_cls->load_plugin_textdomain();
         }
@@ -3954,7 +3954,7 @@ class Build_App_Online_Public {
     public function locations(){
 
         /*$data = array();
-        $options = get_option('build_app_online');
+        $options = get_option('dranjo_app_connect');
 
         $data['locations'] = $options['locations'];
         $data['switchLocations'] = (int)$options['switchLocations'];
@@ -5832,7 +5832,7 @@ class Build_App_Online_Public {
             if($locale != 'en') {
                 require_once plugin_dir_path( dirname( __FILE__ ) ) . '/languages/' . $locale . '.php';
 
-                $locale_cls = new Build_App_Online_i18nt();
+                $locale_cls = new dranjo_app_connect_i18nt();
 
                 $language_texts = $locale_cls->load_plugin_textdomain();
             }
