@@ -19,7 +19,7 @@
  *
  * @package    dranjo_app_connect
  * @subpackage dranjo_app_connect/includes
- * @author     Abdul Hakeem <hakeem.nala@gmail.com>
+ * @author     Dranjo <support@dranjo.com>
  */
 class dranjo_app_connect_Loader {
 
