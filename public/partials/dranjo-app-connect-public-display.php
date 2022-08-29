@@ -5,11 +5,11 @@
  *
  * This file is used to markup the public-facing aspects of the plugin.
  *
- * @link       https://buildapp.online
+ * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    Build_App_Online
- * @subpackage Build_App_Online/public/partials
+ * @package    dranjo_app_connect
+ * @subpackage dranjo_app_connect/public/partials
  */
 ?>
 
