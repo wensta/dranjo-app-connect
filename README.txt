@@ -36,7 +36,7 @@ Steps to create mobile app:
 16. Click Build
 17. Download and Upload to play store
 
-Steps to customize your app:
+Steps to customize your app:;
 
 1. Download design my app from play store [https://play.google.com/store/apps/details?id=com.dranjo.studio](https://play.google.com/store/apps/details?id=com.dranjo.studio)
 2. Or Download design my app from apple store [https://apps.apple.com/in/app/design-my-app/id1569479709](https://apps.apple.com/in/app/design-my-app/id1569479709)
