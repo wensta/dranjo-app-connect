@@ -72,7 +72,7 @@ class build_app_online {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'dranjo-app-connect';
+		$this->plugin_name = 'build-app-online';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -121,7 +121,7 @@ class build_app_online {
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-dranjo-app-connect-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-build-app-online-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -198,41 +198,41 @@ class build_app_online {
         $this->loader->add_filter('woocommerce_rest_product_cat_query', $plugin_admin, 'remove_uncategorized_category', 10, 1);
 
         /* For All Multi Vendor */
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-upload_image', $plugin_admin, 'uploadimage');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-upload_image', $plugin_admin, 'uploadimage');
+        $this->loader->add_action('wp_ajax_build-app-online-upload_image', $plugin_admin, 'uploadimage');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-upload_image', $plugin_admin, 'uploadimage');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-upload_images', $plugin_admin, 'uploadimages');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-upload_images', $plugin_admin, 'uploadimages');
+        $this->loader->add_action('wp_ajax_build-app-online-upload_images', $plugin_admin, 'uploadimages');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-upload_images', $plugin_admin, 'uploadimages');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-new_chat_message', $plugin_admin, 'flutter_new_chat_message');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-new_chat_message', $plugin_admin, 'flutter_new_chat_message');
+        $this->loader->add_action('wp_ajax_build-app-online-new_chat_message', $plugin_admin, 'flutter_new_chat_message');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-new_chat_message', $plugin_admin, 'flutter_new_chat_message');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-test', $plugin_admin, 'test');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-test', $plugin_admin, 'test');
+        $this->loader->add_action('wp_ajax_build-app-online-test', $plugin_admin, 'test');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-test', $plugin_admin, 'test');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-site_details', $plugin_admin, 'site_details');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-site_details', $plugin_admin, 'site_details');
+        $this->loader->add_action('wp_ajax_build-app-online-site_details', $plugin_admin, 'site_details');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-site_details', $plugin_admin, 'site_details');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-product_addons', $plugin_admin, 'get_product_addons');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-product_addons', $plugin_admin, 'get_product_addons');
+        $this->loader->add_action('wp_ajax_build-app-online-product_addons', $plugin_admin, 'get_product_addons');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-product_addons', $plugin_admin, 'get_product_addons');
 
         $this->loader->add_action('wp_ajax_app_save_options', $plugin_admin, 'app_save_options');
         $this->loader->add_action('wp_ajax_nopriv_app_save_options', $plugin_admin, 'app_save_options');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-bao_options', $plugin_admin, 'app_get_options');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-bao_options', $plugin_admin, 'app_get_options');
+        $this->loader->add_action('wp_ajax_build-app-online-bao_options', $plugin_admin, 'app_get_options');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-bao_options', $plugin_admin, 'app_get_options');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-save_options', $plugin_admin, 'app_save_options');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-save_options', $plugin_admin, 'app_save_options');
+        $this->loader->add_action('wp_ajax_build-app-online-save_options', $plugin_admin, 'app_save_options');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-save_options', $plugin_admin, 'app_save_options');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-jwt_token', $plugin_admin, 'firebase_jwt_token');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-jwt_token', $plugin_admin, 'firebase_jwt_token');
+        $this->loader->add_action('wp_ajax_build-app-online-jwt_token', $plugin_admin, 'firebase_jwt_token');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-jwt_token', $plugin_admin, 'firebase_jwt_token');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-update_user_metavalue', $plugin_admin, 'update_user_meta_value');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-update_user_metavalue', $plugin_admin, 'update_user_meta_value');
+        $this->loader->add_action('wp_ajax_build-app-online-update_user_metavalue', $plugin_admin, 'update_user_meta_value');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-update_user_metavalue', $plugin_admin, 'update_user_meta_value');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-order_statuses', $plugin_admin, 'get_order_statuses');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-order_statuses', $plugin_admin, 'get_order_statuses');
+        $this->loader->add_action('wp_ajax_build-app-online-order_statuses', $plugin_admin, 'get_order_statuses');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-order_statuses', $plugin_admin, 'get_order_statuses');
 
         /* This is for WC Marketplace only */
         $this->loader->add_filter('wcmp_rest_prepare_dc_vendor_object', $plugin_admin, 'mstoreapp_prepare_vendors_query', 10, 3);
@@ -241,8 +241,8 @@ class build_app_online {
         $this->loader->add_filter('woocommerce_rest_shop_order_object_query', $plugin_admin, 'mstoreapp_prepare_order_query', 10, 2);
 
         /* For Dokan and WCFM Only */
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-update-vendor-product', $plugin_admin, 'update_vendor_product');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-update-vendor-product', $plugin_admin, 'update_vendor_product');
+        $this->loader->add_action('wp_ajax_build-app-online-update-vendor-product', $plugin_admin, 'update_vendor_product');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-update-vendor-product', $plugin_admin, 'update_vendor_product');
 
         /* For Dokan Only */
         $this->loader->add_filter('woocommerce_rest_prepare_product_object', $plugin_admin, 'mstoreapp_prepare_product', 10, 3);
@@ -267,210 +267,210 @@ class build_app_online {
 
 		//$this->loader->add_filter( 'woocommerce_product_query_tax_query', $plugin_public, 'update_product_query_tax_query', 10, 2 );
 
-		$this->loader->add_action('wp_ajax_dranjo-app-connect-add_all_products_cart', $plugin_public, 'add_all_products_cart');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-add_all_products_cart', $plugin_public, 'add_all_products_cart');
+		$this->loader->add_action('wp_ajax_build-app-online-add_all_products_cart', $plugin_public, 'add_all_products_cart');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-add_all_products_cart', $plugin_public, 'add_all_products_cart');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-set_user_cart', $plugin_public, 'set_user_cart');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-set_user_cart', $plugin_public, 'set_user_cart');
+        $this->loader->add_action('wp_ajax_build-app-online-set_user_cart', $plugin_public, 'set_user_cart');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-set_user_cart', $plugin_public, 'set_user_cart');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-dotapp', $plugin_public, 'dotapp');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-dotapp', $plugin_public, 'dotapp');
+        $this->loader->add_action('wp_ajax_build-app-online-dotapp', $plugin_public, 'dotapp');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-dotapp', $plugin_public, 'dotapp');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-keys', $plugin_public, 'keys');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-keys', $plugin_public, 'keys');
+        $this->loader->add_action('wp_ajax_build-app-online-keys', $plugin_public, 'keys');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-keys', $plugin_public, 'keys');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-login', $plugin_public, 'login');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-login', $plugin_public, 'login');
+        $this->loader->add_action('wp_ajax_build-app-online-login', $plugin_public, 'login');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-login', $plugin_public, 'login');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-cart', $plugin_public, 'cart');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-cart', $plugin_public, 'cart');
+        $this->loader->add_action('wp_ajax_build-app-online-cart', $plugin_public, 'cart');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-cart', $plugin_public, 'cart');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-apply_coupon', $plugin_public, 'apply_coupon');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-apply_coupon', $plugin_public, 'apply_coupon');
+        $this->loader->add_action('wp_ajax_build-app-online-apply_coupon', $plugin_public, 'apply_coupon');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-apply_coupon', $plugin_public, 'apply_coupon');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-test', $plugin_public, 'test');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-test', $plugin_public, 'test');
+        $this->loader->add_action('wp_ajax_build-app-online-test', $plugin_public, 'test');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-test', $plugin_public, 'test');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-remove_coupon', $plugin_public, 'remove_coupon');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-remove_coupon', $plugin_public, 'remove_coupon');
+        $this->loader->add_action('wp_ajax_build-app-online-remove_coupon', $plugin_public, 'remove_coupon');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-remove_coupon', $plugin_public, 'remove_coupon');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-update_shipping_method', $plugin_public, 'update_shipping_method');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-update_shipping_method', $plugin_public, 'update_shipping_method');
+        $this->loader->add_action('wp_ajax_build-app-online-update_shipping_method', $plugin_public, 'update_shipping_method');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-update_shipping_method', $plugin_public, 'update_shipping_method');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-remove_cart_item', $plugin_public, 'remove_cart_item');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-remove_cart_item', $plugin_public, 'remove_cart_item');
+        $this->loader->add_action('wp_ajax_build-app-online-remove_cart_item', $plugin_public, 'remove_cart_item');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-remove_cart_item', $plugin_public, 'remove_cart_item');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-get_checkout_form', $plugin_public, 'get_checkout_form');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-get_checkout_form', $plugin_public, 'get_checkout_form');
+        $this->loader->add_action('wp_ajax_build-app-online-get_checkout_form', $plugin_public, 'get_checkout_form');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-get_checkout_form', $plugin_public, 'get_checkout_form');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-update_order_review', $plugin_public, 'update_order_review');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-update_order_review', $plugin_public, 'update_order_review');
+        $this->loader->add_action('wp_ajax_build-app-online-update_order_review', $plugin_public, 'update_order_review');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-update_order_review', $plugin_public, 'update_order_review');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-add_to_cart', $plugin_public, 'add_to_cart');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-add_to_cart', $plugin_public, 'add_to_cart');
+        $this->loader->add_action('wp_ajax_build-app-online-add_to_cart', $plugin_public, 'add_to_cart');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-add_to_cart', $plugin_public, 'add_to_cart');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-add_product_to_cart', $plugin_public, 'add_product_to_cart');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-add_product_to_cart', $plugin_public, 'add_product_to_cart');
+        $this->loader->add_action('wp_ajax_build-app-online-add_product_to_cart', $plugin_public, 'add_product_to_cart');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-add_product_to_cart', $plugin_public, 'add_product_to_cart');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-payment', $plugin_public, 'payment');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-payment', $plugin_public, 'payment');
+        $this->loader->add_action('wp_ajax_build-app-online-payment', $plugin_public, 'payment');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-payment', $plugin_public, 'payment');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-userdata', $plugin_public, 'userdata');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-userdata', $plugin_public, 'userdata');
+        $this->loader->add_action('wp_ajax_build-app-online-userdata', $plugin_public, 'userdata');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-userdata', $plugin_public, 'userdata');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-json_search_products', $plugin_public, 'json_search_products');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-json_search_products', $plugin_public, 'json_search_products');
+        $this->loader->add_action('wp_ajax_build-app-online-json_search_products', $plugin_public, 'json_search_products');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-json_search_products', $plugin_public, 'json_search_products');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-nonce', $plugin_public, 'nonce');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-nonce', $plugin_public, 'nonce');
+        $this->loader->add_action('wp_ajax_build-app-online-nonce', $plugin_public, 'nonce');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-nonce', $plugin_public, 'nonce');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-passwordreset', $plugin_public, 'passwordreset');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-passwordreset', $plugin_public, 'passwordreset');
+        $this->loader->add_action('wp_ajax_build-app-online-passwordreset', $plugin_public, 'passwordreset');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-passwordreset', $plugin_public, 'passwordreset');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-get_country', $plugin_public, 'get_country');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-get_country', $plugin_public, 'get_country');
+        $this->loader->add_action('wp_ajax_build-app-online-get_country', $plugin_public, 'get_country');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-get_country', $plugin_public, 'get_country');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-get_wishlist', $plugin_public, 'get_wishlist');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-get_wishlist', $plugin_public, 'get_wishlist');
+        $this->loader->add_action('wp_ajax_build-app-online-get_wishlist', $plugin_public, 'get_wishlist');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-get_wishlist', $plugin_public, 'get_wishlist');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-wishlistids', $plugin_public, 'get_wishlistids');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-wishlistids', $plugin_public, 'get_wishlistids');
+        $this->loader->add_action('wp_ajax_build-app-online-wishlistids', $plugin_public, 'get_wishlistids');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-wishlistids', $plugin_public, 'get_wishlistids');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-update_wishlist', $plugin_public, 'update_wishlist');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-update_wishlist', $plugin_public, 'update_wishlist');
+        $this->loader->add_action('wp_ajax_build-app-online-update_wishlist', $plugin_public, 'update_wishlist');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-update_wishlist', $plugin_public, 'update_wishlist');
 
         //Delete
         $this->loader->add_action('wp_ajax_dotapp_get_wishlist', $plugin_public, 'fetch_wishlist');
         $this->loader->add_action('wp_ajax_nopriv_dotapp_get_wishlist', $plugin_public, 'fetch_wishlist');
 
         //Delete
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-remove_wishlist', $plugin_public, 'remove_wishlist');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-remove_wishlist', $plugin_public, 'remove_wishlist');
+        $this->loader->add_action('wp_ajax_build-app-online-remove_wishlist', $plugin_public, 'remove_wishlist');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-remove_wishlist', $plugin_public, 'remove_wishlist');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-page_content', $plugin_public, 'pagecontent');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-page_content', $plugin_public, 'pagecontent');
+        $this->loader->add_action('wp_ajax_build-app-online-page_content', $plugin_public, 'pagecontent');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-page_content', $plugin_public, 'pagecontent');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-set_fulfill_status', $plugin_public, 'set_fulfill_status');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-set_fulfill_status', $plugin_public, 'set_fulfill_status');
+        $this->loader->add_action('wp_ajax_build-app-online-set_fulfill_status', $plugin_public, 'set_fulfill_status');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-set_fulfill_status', $plugin_public, 'set_fulfill_status');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-facebook_login', $plugin_public, 'facebook_login');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-facebook_login', $plugin_public, 'facebook_login');
+        $this->loader->add_action('wp_ajax_build-app-online-facebook_login', $plugin_public, 'facebook_login');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-facebook_login', $plugin_public, 'facebook_login');
 
-	    $this->loader->add_action('wp_ajax_dranjo-app-connect-google_login', $plugin_public, 'google_login');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-google_login', $plugin_public, 'google_login');
+	    $this->loader->add_action('wp_ajax_build-app-online-google_login', $plugin_public, 'google_login');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-google_login', $plugin_public, 'google_login');
 
-	    $this->loader->add_action('wp_ajax_dranjo-app-connect-apple_login', $plugin_public, 'apple_login');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-apple_login', $plugin_public, 'apple_login');
+	    $this->loader->add_action('wp_ajax_build-app-online-apple_login', $plugin_public, 'apple_login');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-apple_login', $plugin_public, 'apple_login');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-otp_verification', $plugin_public, 'otp_verification');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-otp_verification', $plugin_public, 'otp_verification');
+        $this->loader->add_action('wp_ajax_build-app-online-otp_verification', $plugin_public, 'otp_verification');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-otp_verification', $plugin_public, 'otp_verification');
 
-	    $this->loader->add_action('wp_ajax_dranjo-app-connect-logout', $plugin_public, 'logout');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-logout', $plugin_public, 'logout');
+	    $this->loader->add_action('wp_ajax_build-app-online-logout', $plugin_public, 'logout');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-logout', $plugin_public, 'logout');
 
-	    $this->loader->add_action('wp_ajax_dranjo-app-connect-emptyCart', $plugin_public, 'emptyCart');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-emptyCart', $plugin_public, 'emptyCart');
+	    $this->loader->add_action('wp_ajax_build-app-online-emptyCart', $plugin_public, 'emptyCart');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-emptyCart', $plugin_public, 'emptyCart');
 
-	    $this->loader->add_action('wp_ajax_dranjo-app-connect-update_user_notification', $plugin_public, 'update_user_notification');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-update_user_notification', $plugin_public, 'update_user_notification');
+	    $this->loader->add_action('wp_ajax_build-app-online-update_user_notification', $plugin_public, 'update_user_notification');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-update_user_notification', $plugin_public, 'update_user_notification');
 
-	    $this->loader->add_action('wp_ajax_dranjo-app-connect-email-otp', $plugin_public, 'email_otp');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-email-otp', $plugin_public, 'email_otp');
+	    $this->loader->add_action('wp_ajax_build-app-online-email-otp', $plugin_public, 'email_otp');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-email-otp', $plugin_public, 'email_otp');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-reset-user-password', $plugin_public, 'reset_user_password');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-reset-user-password', $plugin_public, 'reset_user_password');
+        $this->loader->add_action('wp_ajax_build-app-online-reset-user-password', $plugin_public, 'reset_user_password');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-reset-user-password', $plugin_public, 'reset_user_password');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-create-user', $plugin_public, 'create_user');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-create-user', $plugin_public, 'create_user');
+        $this->loader->add_action('wp_ajax_build-app-online-create-user', $plugin_public, 'create_user');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-create-user', $plugin_public, 'create_user');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-update-address', $plugin_public, 'update_address');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-update-address', $plugin_public, 'update_address');
+        $this->loader->add_action('wp_ajax_build-app-online-update-address', $plugin_public, 'update_address');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-update-address', $plugin_public, 'update_address');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-get-states', $plugin_public, 'get_states');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-get-states', $plugin_public, 'get_states');
+        $this->loader->add_action('wp_ajax_build-app-online-get-states', $plugin_public, 'get_states');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-get-states', $plugin_public, 'get_states');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-product-attributes', $plugin_public, 'product_attributes');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-product-attributes', $plugin_public, 'product_attributes');
+        $this->loader->add_action('wp_ajax_build-app-online-product-attributes', $plugin_public, 'product_attributes');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-product-attributes', $plugin_public, 'product_attributes');
 
-        //$this->loader->add_action('wp_ajax_dranjo-app-connect-locations', $plugin_public, 'locations');
-        //$this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-locations', $plugin_public, 'locations');
+        //$this->loader->add_action('wp_ajax_build-app-online-locations', $plugin_public, 'locations');
+        //$this->loader->add_action('wp_ajax_nopriv_build-app-online-locations', $plugin_public, 'locations');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-wallet', $plugin_public, 'get_wallet');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-wallet', $plugin_public, 'get_wallet');
+        $this->loader->add_action('wp_ajax_build-app-online-wallet', $plugin_public, 'get_wallet');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-wallet', $plugin_public, 'get_wallet');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-woo_refund_key', $plugin_public, 'woo_refund_key');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-woo_refund_key', $plugin_public, 'woo_refund_key');
+        $this->loader->add_action('wp_ajax_build-app-online-woo_refund_key', $plugin_public, 'woo_refund_key');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-woo_refund_key', $plugin_public, 'woo_refund_key');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-categories', $plugin_public, 'get_categories');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-categories', $plugin_public, 'get_categories');
+        $this->loader->add_action('wp_ajax_build-app-online-categories', $plugin_public, 'get_categories');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-categories', $plugin_public, 'get_categories');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-products', $plugin_public, 'getProducts');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-products', $plugin_public, 'getProducts');
+        $this->loader->add_action('wp_ajax_build-app-online-products', $plugin_public, 'getProducts');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-products', $plugin_public, 'getProducts');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-product', $plugin_public, 'getProduct');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-product', $plugin_public, 'getProduct');
+        $this->loader->add_action('wp_ajax_build-app-online-product', $plugin_public, 'getProduct');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-product', $plugin_public, 'getProduct');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-orders', $plugin_public, 'getOrders');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-orders', $plugin_public, 'getOrders');
+        $this->loader->add_action('wp_ajax_build-app-online-orders', $plugin_public, 'getOrders');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-orders', $plugin_public, 'getOrders');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-order', $plugin_public, 'getOrder');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-order', $plugin_public, 'getOrder');
+        $this->loader->add_action('wp_ajax_build-app-online-order', $plugin_public, 'getOrder');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-order', $plugin_public, 'getOrder');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-customer', $plugin_public, 'getCustomerDetail');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-customer', $plugin_public, 'getCustomerDetail');
+        $this->loader->add_action('wp_ajax_build-app-online-customer', $plugin_public, 'getCustomerDetail');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-customer', $plugin_public, 'getCustomerDetail');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-product_details', $plugin_public, 'getProductDetail');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-product_details', $plugin_public, 'getProductDetail');
+        $this->loader->add_action('wp_ajax_build-app-online-product_details', $plugin_public, 'getProductDetail');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-product_details', $plugin_public, 'getProductDetail');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-product_reviews', $plugin_public, 'getProductReviews');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-product_reviews', $plugin_public, 'getProductReviews');
+        $this->loader->add_action('wp_ajax_build-app-online-product_reviews', $plugin_public, 'getProductReviews');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-product_reviews', $plugin_public, 'getProductReviews');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-cancel_order', $plugin_public, 'cancel_order');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-cancel_order', $plugin_public, 'cancel_order');
+        $this->loader->add_action('wp_ajax_build-app-online-cancel_order', $plugin_public, 'cancel_order');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-cancel_order', $plugin_public, 'cancel_order');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-update-cart-item-qty', $plugin_public, 'updateCartQty');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-update-cart-item-qty', $plugin_public, 'updateCartQty');
+        $this->loader->add_action('wp_ajax_build-app-online-update-cart-item-qty', $plugin_public, 'updateCartQty');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-update-cart-item-qty', $plugin_public, 'updateCartQty');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-apply-vendor', $plugin_public, 'dokan_apply_for_vendor');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-apply-vendor', $plugin_public, 'dokan_apply_for_vendor');
+        $this->loader->add_action('wp_ajax_build-app-online-apply-vendor', $plugin_public, 'dokan_apply_for_vendor');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-apply-vendor', $plugin_public, 'dokan_apply_for_vendor');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-checkout_form', $plugin_public, 'checkout_form');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-checkout_form', $plugin_public, 'checkout_form');
+        $this->loader->add_action('wp_ajax_build-app-online-checkout_form', $plugin_public, 'checkout_form');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-checkout_form', $plugin_public, 'checkout_form');
 
         $this->loader->add_filter( 'woocommerce_product_data_store_cpt_get_products_query', $plugin_public, 'handling_custom_meta_query_keys', 10, 3 );
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-downloads', $plugin_public, 'get_downloads');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-downloads', $plugin_public, 'get_downloads');
+        $this->loader->add_action('wp_ajax_build-app-online-downloads', $plugin_public, 'get_downloads');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-downloads', $plugin_public, 'get_downloads');
 
         $this->loader->add_action('wp_ajax_fcm_details', $plugin_public, 'fcm_details');
         $this->loader->add_action('wp_ajax_nopriv_fcm_details', $plugin_public, 'fcm_details');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-store_details', $plugin_public, 'store_details');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-store_details', $plugin_public, 'store_details');
+        $this->loader->add_action('wp_ajax_build-app-online-store_details', $plugin_public, 'store_details');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-store_details', $plugin_public, 'store_details');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-design_app_details', $plugin_public, 'design_app_details');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-design_app_details', $plugin_public, 'design_app_details');
+        $this->loader->add_action('wp_ajax_build-app-online-design_app_details', $plugin_public, 'design_app_details');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-design_app_details', $plugin_public, 'design_app_details');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-taxonomy', $plugin_public, 'blocks_taxonomy');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-taxonomy', $plugin_public, 'blocks_taxonomy');
+        $this->loader->add_action('wp_ajax_build-app-online-taxonomy', $plugin_public, 'blocks_taxonomy');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-taxonomy', $plugin_public, 'blocks_taxonomy');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-myblocks', $plugin_public, 'bao_my_blocks');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-myblocks', $plugin_public, 'bao_my_blocks');
+        $this->loader->add_action('wp_ajax_build-app-online-myblocks', $plugin_public, 'bao_my_blocks');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-myblocks', $plugin_public, 'bao_my_blocks');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-block', $plugin_public, 'get_blocks');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-block', $plugin_public, 'get_blocks');
+        $this->loader->add_action('wp_ajax_build-app-online-block', $plugin_public, 'get_blocks');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-block', $plugin_public, 'get_blocks');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-delete_my_account', $plugin_public, 'delete_my_account');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-delete_my_account', $plugin_public, 'delete_my_account');
+        $this->loader->add_action('wp_ajax_build-app-online-delete_my_account', $plugin_public, 'delete_my_account');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-delete_my_account', $plugin_public, 'delete_my_account');
 
         //$this->loader->add_filter('woocommerce_login_redirect', $plugin_public, 'wc_custom_user_redirect', 101, 3);
 
         //---REWARD POINTS--------/
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-ajax_maybe_apply_discount', $plugin_public, 'ajax_maybe_apply_discount');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-ajax_maybe_apply_discount', $plugin_public, 'ajax_maybe_apply_discount');
+        $this->loader->add_action('wp_ajax_build-app-online-ajax_maybe_apply_discount', $plugin_public, 'ajax_maybe_apply_discount');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-ajax_maybe_apply_discount', $plugin_public, 'ajax_maybe_apply_discount');
 		
-		$this->loader->add_action('wp_ajax_dranjo-app-connect-getPointsHistory', $plugin_public, 'getPointsHistory');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-getPointsHistory', $plugin_public, 'getPointsHistory');
+		$this->loader->add_action('wp_ajax_build-app-online-getPointsHistory', $plugin_public, 'getPointsHistory');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-getPointsHistory', $plugin_public, 'getPointsHistory');
 
         $plugin_multivendor = new build_app_online_Multivendor( $this->get_plugin_name(), $this->get_version() );
 
@@ -481,26 +481,26 @@ class build_app_online {
         
         $this->loader->add_action( 'pre_get_users', $plugin_multivendor, 'pre_get_users', 99, 1  );
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-vendor_reviews', $plugin_multivendor, 'get_vendor_reviews');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-vendor_reviews', $plugin_multivendor, 'get_vendor_reviews');
+        $this->loader->add_action('wp_ajax_build-app-online-vendor_reviews', $plugin_multivendor, 'get_vendor_reviews');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-vendor_reviews', $plugin_multivendor, 'get_vendor_reviews');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-vendor_details', $plugin_multivendor, 'get_vendor_details');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-vendor_details', $plugin_multivendor, 'get_vendor_details');
+        $this->loader->add_action('wp_ajax_build-app-online-vendor_details', $plugin_multivendor, 'get_vendor_details');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-vendor_details', $plugin_multivendor, 'get_vendor_details');
 
-	    $this->loader->add_action('wp_ajax_dranjo-app-connect-vendors', $plugin_multivendor, 'get_vendors');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-vendors', $plugin_multivendor, 'get_vendors');
+	    $this->loader->add_action('wp_ajax_build-app-online-vendors', $plugin_multivendor, 'get_vendors');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-vendors', $plugin_multivendor, 'get_vendors');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-contact_vendor', $plugin_multivendor, 'contact_vendor');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-contact_vendor', $plugin_multivendor, 'contact_vendor');
+        $this->loader->add_action('wp_ajax_build-app-online-contact_vendor', $plugin_multivendor, 'contact_vendor');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-contact_vendor', $plugin_multivendor, 'contact_vendor');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-add_vendor_review', $plugin_multivendor, 'add_vendor_review');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-add_vendor_review', $plugin_multivendor, 'add_vendor_review');
+        $this->loader->add_action('wp_ajax_build-app-online-add_vendor_review', $plugin_multivendor, 'add_vendor_review');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-add_vendor_review', $plugin_multivendor, 'add_vendor_review');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-vendor_categories', $plugin_multivendor, 'getVendorCategories');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-vendor_categories', $plugin_multivendor, 'getVendorCategories');
+        $this->loader->add_action('wp_ajax_build-app-online-vendor_categories', $plugin_multivendor, 'getVendorCategories');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-vendor_categories', $plugin_multivendor, 'getVendorCategories');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-update_user_meta', $plugin_public, 'update_user_meta');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-update_user_meta', $plugin_public, 'update_user_meta');
+        $this->loader->add_action('wp_ajax_build-app-online-update_user_meta', $plugin_public, 'update_user_meta');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-update_user_meta', $plugin_public, 'update_user_meta');
 
 	}
 
@@ -511,8 +511,8 @@ class build_app_online {
 		$this->loader->add_action('wp_ajax_dotapp_verify_payment', $plugin_payments, 'verify_payment');
         $this->loader->add_action('wp_ajax_nopriv_dotapp_verify_payment', $plugin_payments, 'verify_payment');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect_razorpay_order_id', $plugin_payments, 'get_razorpay_order_id');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect_razorpay_order_id', $plugin_payments, 'get_razorpay_order_id');
+        $this->loader->add_action('wp_ajax_build-app-online_razorpay_order_id', $plugin_payments, 'get_razorpay_order_id');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online_razorpay_order_id', $plugin_payments, 'get_razorpay_order_id');
 
 	}
 
@@ -523,14 +523,14 @@ class build_app_online {
         //UnComment Only for Booking
         $this->loader->add_filter('woocommerce_rest_prepare_shop_order_object', $plugin_booking, 'mstoreapp_prepare_order', 10, 3);
 
-	    $this->loader->add_action('wp_ajax_dranjo-app-connect-get_booking', $plugin_booking, 'get_booking');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-get_booking', $plugin_booking, 'get_booking');
+	    $this->loader->add_action('wp_ajax_build-app-online-get_booking', $plugin_booking, 'get_booking');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-get_booking', $plugin_booking, 'get_booking');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-create_booking', $plugin_booking, 'create_booking');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-create_booking', $plugin_booking, 'create_booking');
+        $this->loader->add_action('wp_ajax_build-app-online-create_booking', $plugin_booking, 'create_booking');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-create_booking', $plugin_booking, 'create_booking');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-user_booking', $plugin_booking, 'get_user_booking');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-user_booking', $plugin_booking, 'get_user_booking');
+        $this->loader->add_action('wp_ajax_build-app-online-user_booking', $plugin_booking, 'get_user_booking');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-user_booking', $plugin_booking, 'get_user_booking');
 
 	}
 
@@ -538,43 +538,43 @@ class build_app_online {
 
 		$plugin_blog = new build_app_online_Blog_Public( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action('wp_ajax_dranjo-app-connect-blog-posts', $plugin_blog, 'get_posts');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-posts', $plugin_blog, 'get_posts');
+		$this->loader->add_action('wp_ajax_build-app-online-blog-posts', $plugin_blog, 'get_posts');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-posts', $plugin_blog, 'get_posts');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-blog-design_app_details', $plugin_blog, 'design_app_details');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-design_app_details', $plugin_blog, 'design_app_details');
+        $this->loader->add_action('wp_ajax_build-app-online-blog-design_app_details', $plugin_blog, 'design_app_details');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-design_app_details', $plugin_blog, 'design_app_details');
 
-		$this->loader->add_action('wp_ajax_dranjo-app-connect-blog-details', $plugin_blog, 'app_details');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-details', $plugin_blog, 'app_details');
+		$this->loader->add_action('wp_ajax_build-app-online-blog-details', $plugin_blog, 'app_details');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-details', $plugin_blog, 'app_details');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-blog-login', $plugin_blog, 'login');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-login', $plugin_blog, 'login');
+        $this->loader->add_action('wp_ajax_build-app-online-blog-login', $plugin_blog, 'login');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-login', $plugin_blog, 'login');
 
         $this->loader->add_action( 'save_post', $plugin_blog, 'save_new_post', 10, 3  );
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-blog-site_details', $plugin_blog, 'site_details');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-site_details', $plugin_blog, 'site_details');
+        $this->loader->add_action('wp_ajax_build-app-online-blog-site_details', $plugin_blog, 'site_details');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-site_details', $plugin_blog, 'site_details');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-blog-save_options', $plugin_blog, 'app_save_options');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-save_options', $plugin_blog, 'app_save_options');
+        $this->loader->add_action('wp_ajax_build-app-online-blog-save_options', $plugin_blog, 'app_save_options');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-save_options', $plugin_blog, 'app_save_options');
 
-		$this->loader->add_action('wp_ajax_dranjo-app-connect-blog-fcm_details', $plugin_blog, 'fcm_details');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-fcm_details', $plugin_blog, 'fcm_details');
+		$this->loader->add_action('wp_ajax_build-app-online-blog-fcm_details', $plugin_blog, 'fcm_details');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-fcm_details', $plugin_blog, 'fcm_details');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-blog-get_bookmark', $plugin_blog, 'get_bookmark');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-get_bookmark', $plugin_blog, 'get_bookmark');
+        $this->loader->add_action('wp_ajax_build-app-online-blog-get_bookmark', $plugin_blog, 'get_bookmark');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-get_bookmark', $plugin_blog, 'get_bookmark');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-blog-bookmarkids', $plugin_blog, 'get_bookmarkids');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-bookmarkids', $plugin_blog, 'get_bookmarkids');
+        $this->loader->add_action('wp_ajax_build-app-online-blog-bookmarkids', $plugin_blog, 'get_bookmarkids');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-bookmarkids', $plugin_blog, 'get_bookmarkids');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-blog-update_bookmark', $plugin_blog, 'update_bookmark');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-update_bookmark', $plugin_blog, 'update_bookmark');
+        $this->loader->add_action('wp_ajax_build-app-online-blog-update_bookmark', $plugin_blog, 'update_bookmark');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-update_bookmark', $plugin_blog, 'update_bookmark');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-blog-myblocks', $plugin_blog, 'bao_my_blocks');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-myblocks', $plugin_blog, 'bao_my_blocks');
+        $this->loader->add_action('wp_ajax_build-app-online-blog-myblocks', $plugin_blog, 'bao_my_blocks');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-myblocks', $plugin_blog, 'bao_my_blocks');
 
-        $this->loader->add_action('wp_ajax_dranjo-app-connect-blog-block', $plugin_blog, 'get_blocks');
-        $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-block', $plugin_blog, 'get_blocks');
+        $this->loader->add_action('wp_ajax_build-app-online-blog-block', $plugin_blog, 'get_blocks');
+        $this->loader->add_action('wp_ajax_nopriv_build-app-online-blog-block', $plugin_blog, 'get_blocks');
 
 	}
 

@@ -73,7 +73,7 @@ class build_app_online_Blog_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dranjo-app-connect-blog-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/build-app-online-blog-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class build_app_online_Blog_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dranjo-app-connect-blog-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/build-app-online-blog-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
