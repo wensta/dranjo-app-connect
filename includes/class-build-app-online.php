@@ -127,18 +127,18 @@ class dranjo_app_connect {
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-dranjo-app-connect-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-build-app-online-public.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the multivendor of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-dranjo-app-connect-multivendor.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-build-app-online-multivendor.php';
 
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-dranjo-app-connect-payments.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-build-app-online-payments.php';
 
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-dranjo-app-connect-booking.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-build-app-online-booking.php';
 
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-dranjo-app-connect-blog-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-build-app-online-blog-public.php';
 
 		$this->loader = new dranjo_app_connect_Loader();
 
