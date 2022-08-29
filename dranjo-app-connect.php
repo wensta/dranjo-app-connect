@@ -62,7 +62,7 @@ register_deactivation_hook( __FILE__, 'deactivate_dranjo_app_connect' );
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-dranjo-app-connect.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-build-app-online.php';
 
 /**
  * Begins execution of the plugin.
