@@ -115,7 +115,7 @@ Integrate Firebase and Configure dynamic link - https://www.youtube.com/watch?v=
 Download and Install TeraWallet plugin Version 1.3.10: https://downloads.wordpress.org/plugin/woo-wallet.1.3.10.zip
 
 == Screenshots ==
-//1. Home screenshot screenshot-1.png.
+1. Home screenshot screenshot-1.png.
 2. RTL screenshot screenshot-2.png.
 3. Category screenshot screenshot-3.png.
 4. Cart screenshot screenshot-4.png.
