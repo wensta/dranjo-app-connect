@@ -39,19 +39,19 @@ define( 'dranjo_connect', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-dranjo-app-connect-activator.php
+ * This action is documented in includes/class-build-app-online-activator.php
  */
 function activate_dranjo_app_connect() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-dranjo-app-connect-activator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-build-app-online-activator.php';
 	dranjo_app_connect_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-dranjo-app-connect-deactivator.php
+ * This action is documented in includes/class-build-app-online-deactivator.php
  */
 function deactivate_dranjo_app_connect() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-dranjo-app-connect-deactivator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-build-app-online-deactivator.php';
 	dranjo_app_connect_Deactivator::deactivate();
 }
 
