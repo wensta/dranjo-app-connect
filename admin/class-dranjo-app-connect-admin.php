@@ -10,8 +10,8 @@ use Firebase\JWT\JWT;
  * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    build_app_online
- * @subpackage build_app_online/admin
+ * @package    dranjo_connect
+ * @subpackage dranjo_connect/admin
  */
 
 /**
@@ -20,11 +20,11 @@ use Firebase\JWT\JWT;
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    build_app_online
- * @subpackage build_app_online/admin
+ * @package    dranjo_connect
+ * @subpackage dranjo_connect/admin
  * @author     Dranjo <support@dranjo.com>
  */
-class build_app_online_Admin {
+class dranjo_connect_Admin {
 
     /**
      * The ID of this plugin.
@@ -69,10 +69,10 @@ class build_app_online_Admin {
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in build_app_online_Loader as all of the hooks are defined
+         * defined in dranjo_connect_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The build_app_online_Loader will then create the relationship
+         * The dranjo_connect_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
@@ -92,10 +92,10 @@ class build_app_online_Admin {
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in build_app_online_Loader as all of the hooks are defined
+         * defined in dranjo_connect_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The build_app_online_Loader will then create the relationship
+         * The dranjo_connect_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */

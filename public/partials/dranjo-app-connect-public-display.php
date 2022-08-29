@@ -8,8 +8,8 @@
  * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    build_app_online
- * @subpackage build_app_online/public/partials
+ * @package    dranjo_connect
+ * @subpackage dranjo_connect/public/partials
  */
 ?>
 

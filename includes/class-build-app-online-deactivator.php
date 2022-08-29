@@ -6,8 +6,8 @@
  * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    build_app_online
- * @subpackage build_app_online/includes
+ * @package    dranjo_connect
+ * @subpackage dranjo_connect/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    build_app_online
- * @subpackage build_app_online/includes
+ * @package    dranjo_connect
+ * @subpackage dranjo_connect/includes
  * @author     Dranjo <support@dranjo.com>
  */
-class build_app_online_Deactivator {
+class dranjo_connect_Deactivator {
 
 	/**
 	 * Short Description. (use period)

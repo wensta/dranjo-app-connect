@@ -6,8 +6,8 @@
  * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    build_app_online_Blog
- * @subpackage build_app_online_Blog/public
+ * @package    dranjo_connect_Blog
+ * @subpackage dranjo_connect_Blog/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    build_app_online_Blog
- * @subpackage build_app_online_Blog/public
+ * @package    dranjo_connect_Blog
+ * @subpackage dranjo_connect_Blog/public
  * @author     Dranjo <info@buildapp.online>
  */
-class build_app_online_Blog_Public {
+class dranjo_connect_Blog_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -65,10 +65,10 @@ class build_app_online_Blog_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in build_app_online_Blog_Loader as all of the hooks are defined
+		 * defined in dranjo_connect_Blog_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The build_app_online_Blog_Loader will then create the relationship
+		 * The dranjo_connect_Blog_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -88,10 +88,10 @@ class build_app_online_Blog_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in build_app_online_Blog_Loader as all of the hooks are defined
+		 * defined in dranjo_connect_Blog_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The build_app_online_Blog_Loader will then create the relationship
+		 * The dranjo_connect_Blog_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -117,7 +117,7 @@ class build_app_online_Blog_Public {
         if($locale != 'en') {
             require_once plugin_dir_path( dirname( __FILE__ ) ) . '/languages/' . $locale . '.php';
 
-            $locale_cls = new build_app_online_i18nt();
+            $locale_cls = new dranjo_connect_i18nt();
 
             $language_texts = $locale_cls->load_plugin_textdomain();
         }
@@ -196,7 +196,7 @@ class build_app_online_Blog_Public {
         if($locale != 'en') {
             require_once plugin_dir_path( dirname( __FILE__ ) ) . '/languages/' . $locale . '.php';
 
-            $locale_cls = new build_app_online_i18nt();
+            $locale_cls = new dranjo_connect_i18nt();
 
             $language_texts = $locale_cls->load_plugin_textdomain();
         }

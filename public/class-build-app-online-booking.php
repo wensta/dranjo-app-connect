@@ -6,8 +6,8 @@
  * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    build_app_online
- * @subpackage build_app_online/Booking
+ * @package    dranjo_connect
+ * @subpackage dranjo_connect/Booking
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    build_app_online
- * @subpackage build_app_online/Booking
+ * @package    dranjo_connect
+ * @subpackage dranjo_connect/Booking
  * @author     Dranjo <support@dranjo.com>
  */
-class build_app_online_Booking
+class dranjo_connect_Booking
 {
 
     /**

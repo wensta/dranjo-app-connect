@@ -41,22 +41,22 @@ define( 'dranjo_connect', '1.0.0' );
  * The code that runs during plugin activation.
  * This action is documented in includes/class-build-app-online-activator.php
  */
-function activate_build_app_online() {
+function activate_dranjo_connect() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-build-app-online-activator.php';
-	build_app_online_Activator::activate();
+	dranjo_connect_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-build-app-online-deactivator.php
  */
-function deactivate_build_app_online() {
+function deactivate_dranjo_connect() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-build-app-online-deactivator.php';
-	build_app_online_Deactivator::deactivate();
+	dranjo_connect_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_build_app_online' );
-register_deactivation_hook( __FILE__, 'deactivate_build_app_online' );
+register_activation_hook( __FILE__, 'activate_dranjo_connect' );
+register_deactivation_hook( __FILE__, 'deactivate_dranjo_connect' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -76,7 +76,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-build-app-online.php';
 
 add_action('rest_api_init', 'register_rest_data' );
 
-function run_build_app_online() {
+function run_dranjo_connect() {
 
 	$object_type = 'post';
 	$args1 = array(
@@ -194,7 +194,7 @@ function run_build_app_online() {
 	}
 
 
-	$plugin = new build_app_online();
+	$plugin = new dranjo_connect();
 	$plugin->run();
 
 }
@@ -245,4 +245,4 @@ function compasshb_do_shortcodes_title( $object, $field_name, $request )
 */
 //Uncomment this when you use wpbakery page builder and in app if shortcode not rendered
 
-run_build_app_online();
+run_dranjo_connect();

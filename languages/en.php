@@ -1,6 +1,6 @@
 <?php
 
-class build_app_online_i18nt {
+class dranjo_connect_i18nt {
     public function load_plugin_textdomain() {
         return array(
 			"Home"=>  "Home",

@@ -9,8 +9,8 @@
  * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    build_app_online
- * @subpackage build_app_online/includes
+ * @package    dranjo_connect
+ * @subpackage dranjo_connect/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    build_app_online
- * @subpackage build_app_online/includes
+ * @package    dranjo_connect
+ * @subpackage dranjo_connect/includes
  * @author     Dranjo <support@dranjo.com>
  */
-class build_app_online_i18n {
+class dranjo_connect_i18n {
 
 
 	/**
