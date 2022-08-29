@@ -6,8 +6,8 @@
  * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    dranjo_app_connect
- * @subpackage dranjo_app_connect/includes
+ * @package    build_app_online
+ * @subpackage build_app_online/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    dranjo_app_connect
- * @subpackage dranjo_app_connect/includes
+ * @package    build_app_online
+ * @subpackage build_app_online/includes
  * @author     Dranjo <support@dranjo.com>
  */
-class dranjo_app_connect_Activator {
+class build_app_online_Activator {
 
 	/**
 	 * Short Description. (use period)

@@ -22,7 +22,7 @@
  * @link       https://app.dranjo.com
  * @since      1.0.0
  *
- * @package    dranjo_app_connect
+ * @package    build_app_online
  */
 
 // If uninstall not called from WordPress, then exit.

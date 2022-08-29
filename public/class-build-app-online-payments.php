@@ -6,8 +6,8 @@
  * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    dranjo_app_connect
- * @subpackage dranjo_app_connect/Payments
+ * @package    build_app_online
+ * @subpackage build_app_online/Payments
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    dranjo_app_connect
- * @subpackage dranjo_app_connect/Payments
+ * @package    build_app_online
+ * @subpackage build_app_online/Payments
  * @author     Dranjo <support@dranjo.com>
  */
-class dranjo_app_connect_Payments
+class build_app_online_Payments
 {
 
     /**

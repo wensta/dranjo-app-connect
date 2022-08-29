@@ -9,8 +9,8 @@
  * @link       https://dranjo.com
  * @since      1.0.0
  *
- * @package    dranjo_app_connect
- * @subpackage dranjo_app_connect/includes
+ * @package    build_app_online
+ * @subpackage build_app_online/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    dranjo_app_connect
- * @subpackage dranjo_app_connect/includes
+ * @package    build_app_online
+ * @subpackage build_app_online/includes
  * @author     Dranjo <support@dranjo.com>
  */
-class dranjo_app_connect {
+class build_app_online {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class dranjo_app_connect {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      dranjo_app_connect_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      build_app_online_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -67,8 +67,8 @@ class dranjo_app_connect {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'dranjo_app_connect_VERSION' ) ) {
-			$this->version = dranjo_app_connect_VERSION;
+		if ( defined( 'build_app_online_VERSION' ) ) {
+			$this->version = build_app_online_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
@@ -93,10 +93,10 @@ class dranjo_app_connect {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - dranjo_app_connect_Loader. Orchestrates the hooks of the plugin.
-	 * - dranjo_app_connect_i18n. Defines internationalization functionality.
-	 * - dranjo_app_connect_Admin. Defines all hooks for the admin area.
-	 * - dranjo_app_connect_Public. Defines all hooks for the public side of the site.
+	 * - build_app_online_Loader. Orchestrates the hooks of the plugin.
+	 * - build_app_online_i18n. Defines internationalization functionality.
+	 * - build_app_online_Admin. Defines all hooks for the admin area.
+	 * - build_app_online_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -140,14 +140,14 @@ class dranjo_app_connect {
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-build-app-online-blog-public.php';
 
-		$this->loader = new dranjo_app_connect_Loader();
+		$this->loader = new build_app_online_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the dranjo_app_connect_i18n class in order to set the domain and to register the hook
+	 * Uses the build_app_online_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -155,7 +155,7 @@ class dranjo_app_connect {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new dranjo_app_connect_i18n();
+		$plugin_i18n = new build_app_online_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -170,7 +170,7 @@ class dranjo_app_connect {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new dranjo_app_connect_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new build_app_online_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -258,7 +258,7 @@ class dranjo_app_connect {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new dranjo_app_connect_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new build_app_online_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -472,7 +472,7 @@ class dranjo_app_connect {
 		$this->loader->add_action('wp_ajax_dranjo-app-connect-getPointsHistory', $plugin_public, 'getPointsHistory');
         $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-getPointsHistory', $plugin_public, 'getPointsHistory');
 
-        $plugin_multivendor = new dranjo_app_connect_Multivendor( $this->get_plugin_name(), $this->get_version() );
+        $plugin_multivendor = new build_app_online_Multivendor( $this->get_plugin_name(), $this->get_version() );
 
         $this->loader->add_filter( 'posts_clauses', $plugin_multivendor, 'mstoreapp_location_filter', 99, 2);
 
@@ -506,7 +506,7 @@ class dranjo_app_connect {
 
 	private function define_payments_hooks() {
 
-		$plugin_payments = new dranjo_app_connect_Payments( $this->get_plugin_name(), $this->get_version() );
+		$plugin_payments = new build_app_online_Payments( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action('wp_ajax_dotapp_verify_payment', $plugin_payments, 'verify_payment');
         $this->loader->add_action('wp_ajax_nopriv_dotapp_verify_payment', $plugin_payments, 'verify_payment');
@@ -518,7 +518,7 @@ class dranjo_app_connect {
 
 	private function define_booking_hooks() {
 
-		$plugin_booking = new dranjo_app_connect_Booking( $this->get_plugin_name(), $this->get_version() );
+		$plugin_booking = new build_app_online_Booking( $this->get_plugin_name(), $this->get_version() );
 
         //UnComment Only for Booking
         $this->loader->add_filter('woocommerce_rest_prepare_shop_order_object', $plugin_booking, 'mstoreapp_prepare_order', 10, 3);
@@ -536,7 +536,7 @@ class dranjo_app_connect {
 
 	private function define_blog_hooks() {
 
-		$plugin_blog = new dranjo_app_connect_Blog_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_blog = new build_app_online_Blog_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action('wp_ajax_dranjo-app-connect-blog-posts', $plugin_blog, 'get_posts');
         $this->loader->add_action('wp_ajax_nopriv_dranjo-app-connect-blog-posts', $plugin_blog, 'get_posts');
@@ -602,7 +602,7 @@ class dranjo_app_connect {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    dranjo_app_connect_Loader    Orchestrates the hooks of the plugin.
+	 * @return    build_app_online_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;
