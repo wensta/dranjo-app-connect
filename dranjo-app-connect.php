@@ -14,7 +14,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Dranjo Connect
- * Plugin URI:        https://wordpress.org/plugins/dranjo_connect
+ * Plugin URI:        https://wordpress.org/plugins/connect_dranjo
  * Description:       Help you to connect with dranjo api
  * Version:           1.0.0
  * Author:            Dranjo
