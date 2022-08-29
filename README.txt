@@ -15,25 +15,6 @@ This plugin will help you to build and run an blog or e-commerce shopping cart m
 
 This plugin will help you to create and run mobile app for woocommerce.
 
-Create your mobile app in 5 minutes.
-
-Watch our youtube video on how to create a mobile app for woocommerce
-
-
-1. How to Build app online
-
-[youtube https://youtu.be/B16izmXiKhM]
-
-
-2. How to customize your app
-
-[youtube https://youtu.be/lTAl4_F3ev4]
-
-
-3. How to integrate Firebase into your app
-
-[youtube https://youtu.be/Jquy-dOyz34]
-
 
 Steps to create mobile app:
 
