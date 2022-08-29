@@ -121,7 +121,7 @@ class dranjo_connect {
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-build-app-online-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-dranjo-app-connect-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
